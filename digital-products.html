@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Products — Fjorlan by RM</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+    background: #0e0e12;
+    color: #f2f2f2;
+    line-height: 1.6;
+  }
+  a { text-decoration: none; color: inherit; }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #222;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  nav .logo { font-size: 1.3rem; font-weight: 700; letter-spacing: 0.5px; }
+  nav .logo span { color: #9b8cff; }
+  nav .nav-links {
+    display: flex;
+    gap: 18px;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+  }
+  nav .nav-links a { color: #ccc; }
+  nav .nav-links a.active { color: #9b8cff; font-weight: 600; }
+
+  .page-header {
+    text-align: center;
+    padding: 60px 20px 20px;
+  }
+  .page-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+  .page-header p {
+    color: #aaa;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .products-grid {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+    display: grid;
+    gap: 20px;
+  }
+  .product-card {
+    background: #17171d;
+    border: 1px solid #242430;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .product-thumb {
+    height: 160px;
+    background: linear-gradient(135deg, #1e1e26, #26263a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #55556a;
+    font-size: 0.85rem;
+  }
+  .product-body { padding: 22px; }
+  .product-tag {
+    display: inline-block;
+    background: #232330;
+    color: #9b8cff;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+  .product-card h3 { font-size: 1.15rem; margin-bottom: 6px; }
+  .product-card p.desc { color: #999; font-size: 0.9rem; margin-bottom: 14px; }
+  .product-price {
+    color: #9b8cff;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 14px;
+  }
+  .product-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #9b8cff;
+    color: #0e0e12;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .cta {
+    text-align: center;
+    padding: 20px 20px 70px;
+  }
+  .btn {
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-block;
+    background: transparent;
+    border: 1px solid #444;
+    color: #f2f2f2;
+  }
+
+  footer {
+    border-top: 1px solid #222;
+    padding: 40px 20px;
+    text-align: center;
+    color: #777;
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Fjorlan <span>by RM</span></div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+    <a href="ai-tools.html">AI Tools</a>
+    <a href="digital-products.html" class="active">Digital Products</a>
+    <a href="order.html">Start a Project</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Digital Products</h1>
+  <p>Ready-made ebooks, coloring books, and creative downloads — made by us, ready for you.</p>
+</div>
+
+<div class="products-grid">
+
+  <div class="product-card">
+    <div class="product-thumb">Ebook Cover Preview</div>
+    <div class="product-body">
+      <span class="product-tag">Ebook</span>
+      <h3>[Your Ebook Title]</h3>
+      <p class="desc">A short description of what this ebook covers and who it's for.</p>
+      <div class="product-price">₹299</div>
+      <a href="contact.html" class="product-btn">Get This Ebook</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-thumb">Coloring Book Preview</div>
+    <div class="product-body">
+      <span class="product-tag">Coloring Book</span>
+      <h3>[Your Coloring Book Title]</h3>
+      <p class="desc">A short description — themes, page count, age group, etc.</p>
+      <div class="product-price">₹199</div>
+      <a href="contact.html" class="product-btn">Get This Coloring Book</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="cta">
+  <p style="color:#999; margin-bottom:16px;">Want something custom made instead?</p>
+  <a href="order.html" class="btn">Start a Custom Project</a>
+</div>
+
+<footer>
+  &copy; 2026 Fjorlan by RM. All rights reserved.
+</footer>
+
+</body>
+</html>
