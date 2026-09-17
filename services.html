@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Fjorlan by RM</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+    background: #0e0e12;
+    color: #f2f2f2;
+    line-height: 1.6;
+  }
+  a { text-decoration: none; color: inherit; }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #222;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  nav .logo { font-size: 1.3rem; font-weight: 700; letter-spacing: 0.5px; }
+  nav .logo span { color: #9b8cff; }
+  nav .nav-links {
+    display: flex;
+    gap: 18px;
+    font-size: 0.9rem;
+  }
+  nav .nav-links a { color: #ccc; }
+  nav .nav-links a.active { color: #9b8cff; font-weight: 600; }
+
+  .page-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+  }
+  .page-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+  .page-header p {
+    color: #aaa;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .services-list {
+    padding: 20px 20px 60px;
+    display: grid;
+    gap: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .service-card {
+    background: #17171d;
+    border: 1px solid #242430;
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .service-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+  .service-card p { color: #999; font-size: 0.92rem; margin-bottom: 14px; }
+  .service-card .price {
+    color: #9b8cff;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-block;
+  }
+  .btn-primary { background: #9b8cff; color: #0e0e12; }
+
+  .cta {
+    text-align: center;
+    padding: 50px 20px 70px;
+  }
+
+  footer {
+    border-top: 1px solid #222;
+    padding: 40px 20px;
+    text-align: center;
+    color: #777;
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Fjorlan <span>by RM</span></div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html" class="active">Services</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Our Services</h1>
+  <p>Professional creative work, powered by AI — for creators, authors, and small businesses.</p>
+</div>
+
+<div class="services-list">
+  <div class="service-card">
+    <h3>AI Image & Design</h3>
+    <p>Custom illustrations, thumbnails, and creative assets tailored to your brand or content.</p>
+    <div class="price">Starting at ₹999</div>
+  </div>
+  <div class="service-card">
+    <h3>Children's Book Illustration</h3>
+    <p>Full book design and illustration for authors, KDP creators, and storybook projects.</p>
+    <div class="price">Starting at ₹2,999</div>
+  </div>
+  <div class="service-card">
+    <h3>YouTube Shorts Package</h3>
+    <p>Hooks, captions, and content concepts designed to grow your channel.</p>
+    <div class="price">Starting at ₹1,499</div>
+  </div>
+  <div class="service-card">
+    <h3>Social Media Design Pack</h3>
+    <p>On-brand Canva designs for creators and small businesses — ready to post.</p>
+    <div class="price">Starting at ₹999</div>
+  </div>
+  <div class="service-card">
+    <h3>KDP Cover & Interior Design</h3>
+    <p>Professional cover and interior layout design for self-published authors.</p>
+    <div class="price">Starting at ₹1,999</div>
+  </div>
+</div>
+
+<div class="cta">
+  <a href="#" class="btn btn-primary">Request This Service</a>
+</div>
+
+<footer>
+  &copy; 2026 Fjorlan by RM. All rights reserved.
+</footer>
+
+</body>
+</html>
