@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Fjorlan by RM</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+    background: #0e0e12;
+    color: #f2f2f2;
+    line-height: 1.6;
+  }
+  a { text-decoration: none; color: inherit; }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #222;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  nav .logo { font-size: 1.3rem; font-weight: 700; letter-spacing: 0.5px; }
+  nav .logo span { color: #9b8cff; }
+  nav .nav-links {
+    display: flex;
+    gap: 18px;
+    font-size: 0.9rem;
+  }
+  nav .nav-links a { color: #ccc; }
+  nav .nav-links a.active { color: #9b8cff; font-weight: 600; }
+
+  .page-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+  }
+  .page-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+  .page-header p {
+    color: #aaa;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .contact-options {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px 20px 70px;
+    display: grid;
+    gap: 14px;
+  }
+  .contact-card {
+    background: #17171d;
+    border: 1px solid #242430;
+    border-radius: 12px;
+    padding: 22px;
+    text-align: center;
+  }
+  .contact-card h3 { font-size: 1.05rem; margin-bottom: 6px; }
+  .contact-card p { color: #999; font-size: 0.9rem; margin-bottom: 14px; }
+  .contact-card a.link { color: #9b8cff; font-weight: 600; font-size: 0.95rem; }
+
+  footer {
+    border-top: 1px solid #222;
+    padding: 40px 20px;
+    text-align: center;
+    color: #777;
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Fjorlan <span>by RM</span></div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Get in Touch</h1>
+  <p>Have a project in mind, or just want to ask a question? Reach out below.</p>
+</div>
+
+<div class="contact-options">
+  <div class="contact-card">
+    <h3>Email</h3>
+    <p>The fastest way to reach us for project inquiries.</p>
+    <a href="mailto:hello@fjorlan.com" class="link">hello@fjorlan.com</a>
+  </div>
+  <div class="contact-card">
+    <h3>Instagram</h3>
+    <p>See our latest work and message us directly.</p>
+    <a href="#" class="link">@fjorlanbyrm</a>
+  </div>
+  <div class="contact-card">
+    <h3>Start a Project</h3>
+    <p>Ready to begin? Fill out our project request form.</p>
+    <a href="services.html" class="link">View Services →</a>
+  </div>
+</div>
+
+<footer>
+  &copy; 2026 Fjorlan by RM. All rights reserved.
+</footer>
+
+</body>
+</html>
