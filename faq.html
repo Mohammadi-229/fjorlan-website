@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — Fjorlan by RM</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+    background: #0e0e12;
+    color: #f2f2f2;
+    line-height: 1.6;
+  }
+  a { text-decoration: none; color: inherit; }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #222;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  nav .logo { font-size: 1.3rem; font-weight: 700; letter-spacing: 0.5px; }
+  nav .logo span { color: #9b8cff; }
+  nav .nav-links {
+    display: flex;
+    gap: 18px;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+  }
+  nav .nav-links a { color: #ccc; }
+  nav .nav-links a.active { color: #9b8cff; font-weight: 600; }
+
+  .page-header {
+    text-align: center;
+    padding: 60px 20px 20px;
+  }
+  .page-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+  .page-header p {
+    color: #aaa;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .faq-list {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+  }
+  .faq-item {
+    background: #17171d;
+    border: 1px solid #242430;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .faq-question {
+    padding: 18px 20px;
+    font-weight: 600;
+    font-size: 0.98rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .faq-question .icon {
+    color: #9b8cff;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+    margin-left: 12px;
+  }
+  .faq-item.open .faq-question .icon {
+    transform: rotate(45deg);
+  }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+    padding: 0 20px;
+  }
+  .faq-item.open .faq-answer {
+    max-height: 300px;
+    padding: 0 20px 18px;
+  }
+  .faq-answer p {
+    color: #999;
+    font-size: 0.9rem;
+  }
+
+  .cta {
+    text-align: center;
+    padding: 20px 20px 70px;
+  }
+  .btn {
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-block;
+    background: #9b8cff;
+    color: #0e0e12;
+  }
+
+  footer {
+    border-top: 1px solid #222;
+    padding: 40px 20px;
+    text-align: center;
+    color: #777;
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Fjorlan <span>by RM</span></div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="order.html">Start a Project</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Frequently Asked Questions</h1>
+  <p>Everything you need to know before starting a project with us.</p>
+</div>
+
+<div class="faq-list">
+
+  <div class="faq-item">
+    <div class="faq-question">How fast is delivery?<span class="icon">+</span></div>
+    <div class="faq-answer"><p>Most projects are delivered within a few days, depending on scope and complexity. Larger projects like full book illustrations may take longer — we'll always give you a clear timeline upfront.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Can I request revisions?<span class="icon">+</span></div>
+    <div class="faq-answer"><p>Yes — revisions are part of every custom project. We want you fully happy with the final result before it's considered complete.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">How does pricing work?<span class="icon">+</span></div>
+    <div class="faq-answer"><p>Each service has a starting price listed on our Services page. Final pricing depends on project scope, and we'll confirm the exact cost with you before starting any work.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">How do I start a project?<span class="icon">+</span></div>
+    <div class="faq-answer"><p>Just fill out our project request form with your details and budget. We typically respond within 24 hours to discuss next steps.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Is the work actually AI-generated?<span class="icon">+</span></div>
+    <div class="faq-answer"><p>We use AI-powered tools to work faster, but every project gets real creative direction, editing, and quality checks from our team before it reaches you — it's not raw, unedited AI output.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">What payment methods do you accept?<span class="icon">+</span></div>
+    <div class="faq-answer"><p>We'll share payment details directly with you once your project is confirmed, based on what's most convenient for your location.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Do you offer refunds?<span class="icon">+</span></div>
+    <div class="faq-answer"><p>Since each project is custom work, refund eligibility depends on the stage of progress. Reach out to us directly if you have concerns — we'll always try to make it right.</p></div>
+  </div>
+
+</div>
+
+<div class="cta">
+  <a href="order.html" class="btn">Start Your Project</a>
+</div>
+
+<footer>
+  &copy; 2026 Fjorlan by RM. All rights reserved.
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-question').addEventListener('click', () => {
+      item.classList.toggle('open');
+    });
+  });
+</script>
+
+</body>
+</html>
