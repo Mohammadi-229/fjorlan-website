@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free AI Tools — Fjorlan by RM</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+    background: #0e0e12;
+    color: #f2f2f2;
+    line-height: 1.6;
+  }
+  a { text-decoration: none; color: inherit; }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #222;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  nav .logo { font-size: 1.3rem; font-weight: 700; letter-spacing: 0.5px; }
+  nav .logo span { color: #9b8cff; }
+  nav .nav-links {
+    display: flex;
+    gap: 18px;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+  }
+  nav .nav-links a { color: #ccc; }
+  nav .nav-links a.active { color: #9b8cff; font-weight: 600; }
+
+  .page-header {
+    text-align: center;
+    padding: 60px 20px 20px;
+  }
+  .page-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+  .page-header p {
+    color: #aaa;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .tools-container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+  }
+  .tool-card {
+    background: #17171d;
+    border: 1px solid #242430;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+  .tool-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+  .tool-card .tool-desc {
+    color: #999;
+    font-size: 0.88rem;
+    margin-bottom: 16px;
+  }
+  .tool-card select, .tool-card input {
+    width: 100%;
+    padding: 12px;
+    background: #1a1a1e;
+    border: 1px solid #2a2a2e;
+    border-radius: 8px;
+    color: #f2f2f2;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+  .tool-btn {
+    width: 100%;
+    padding: 12px;
+    background: #9b8cff;
+    color: #0e0e12;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+  .tool-output {
+    margin-top: 16px;
+    padding: 16px;
+    background: #0e0e12;
+    border: 1px solid #242430;
+    border-radius: 8px;
+    font-size: 0.92rem;
+    color: #ccc;
+    display: none;
+  }
+  .tool-output.show { display: block; }
+  .tool-output p { margin-bottom: 8px; }
+  .tool-output p:last-child { margin-bottom: 0; }
+
+  .cta {
+    text-align: center;
+    padding: 20px 20px 70px;
+  }
+  .btn {
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-block;
+    background: #9b8cff;
+    color: #0e0e12;
+  }
+
+  footer {
+    border-top: 1px solid #222;
+    padding: 40px 20px;
+    text-align: center;
+    color: #777;
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Fjorlan <span>by RM</span></div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+    <a href="order.html">Start a Project</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Free AI Tools</h1>
+  <p>Quick creative sparks — free to use, no signup needed. Like what you get? We can build the full thing for you.</p>
+</div>
+
+<div class="tools-container">
+
+  <div class="tool-card">
+    <h3>YouTube Shorts Hook Generator</h3>
+    <div class="tool-desc">Get an opening line idea for your next short.</div>
+    <select id="hookTopic">
+      <option value="cooking">Cooking</option>
+      <option value="anime">Anime</option>
+      <option value="general">General / Other</option>
+    </select>
+    <button class="tool-btn" onclick="generateHook()">Generate Hook</button>
+    <div class="tool-output" id="hookOutput"></div>
+  </div>
+
+  <div class="tool-card">
+    <h3>Caption & Hashtag Generator</h3>
+    <div class="tool-desc">Get a ready-to-post caption idea for social media.</div>
+    <select id="capTopic">
+      <option value="cooking">Cooking</option>
+      <option value="anime">Anime</option>
+      <option value="art">Art / Illustration</option>
+      <option value="business">Small Business</option>
+    </select>
+    <button class="tool-btn" onclick="generateCaption()">Generate Caption</button>
+    <div class="tool-output" id="capOutput"></div>
+  </div>
+
+  <div class="tool-card">
+    <h3>Book Title Idea Generator</h3>
+    <div class="tool-desc">Stuck on a title for your ebook, storybook, or coloring book?</div>
+    <select id="bookType">
+      <option value="ebook">Ebook</option>
+      <option value="coloring">Coloring Book</option>
+      <option value="children">Children's Storybook</option>
+    </select>
+    <input type="text" id="bookKeyword" placeholder="Enter a keyword (e.g. dragons, ocean, forest)">
+    <button class="tool-btn" onclick="generateTitle()">Generate Titles</button>
+    <div class="tool-output" id="titleOutput"></div>
+  </div>
+
+</div>
+
+<div class="cta">
+  <p style="color:#999; margin-bottom:16px;">Want the real thing — fully designed and ready to use?</p>
+  <a href="order.html" class="btn">Start a Project</a>
+</div>
+
+<footer>
+  &copy; 2026 Fjorlan by RM. All rights reserved.
+</footer>
+
+<script>
+  const hooks = {
+    cooking: [
+      "You've been cooking this wrong your whole life.",
+      "This 3-ingredient recipe changed my kitchen forever.",
+      "POV: you're 30 seconds away from the easiest dinner ever.",
+      "Nobody tells you this cooking hack — until now."
+    ],
+    anime: [
+      "This anime scene lives in my head rent-free.",
+      "The most underrated anime moment of all time.",
+      "If you didn't cry here, are you even human?",
+      "This is why this arc is criminally underrated."
+    ],
+    general: [
+      "Wait for it...",
+      "This changed the way I see everything.",
+      "Nobody talks about this enough.",
+      "You need to see this before you scroll past."
+    ]
+  };
+
+  const captions = {
+    cooking: "🍳 Simple, fast, and packed with flavor. Save this for your next meal! #cookingtips #easyrecipes #foodie #homecooking",
+    anime: "🎌 This scene hits different every time. #anime #animeedit #animefan #weeb",
+    art: "🎨 New piece, fresh off the (digital) easel. #illustration #digitalart #artistsoninstagram #aiart",
+    business: "✨ Small business, big dreams. Support local creators today! #smallbusiness #shopsmall #supportlocal"
+  };
+
+  const titleTemplates = {
+    ebook: ["The Complete Guide to {kw}", "{kw}: A Beginner's Journey", "Mastering {kw} in 30 Days", "The {kw} Handbook"],
+    coloring: ["Magical {kw} Coloring Adventures", "{kw} Wonderland: A Coloring Book", "Color Your Own {kw}", "The Big Book of {kw}"],
+    children: ["The Little {kw} Who Dreamed Big", "{kw}'s Great Adventure", "A Tale of {kw} and Friends", "Goodnight, {kw}"]
+  };
+
+  function generateHook() {
+    const topic = document.getElementById('hookTopic').value;
+    const list = hooks[topic];
+    const pick = list[Math.floor(Math.random() * list.length)];
+    const out = document.getElementById('hookOutput');
+    out.innerHTML = "<p><strong>Your hook:</strong> " + pick + "</p>";
+    out.classList.add('show');
+  }
+
+  function generateCaption() {
+    const topic = document.getElementById('capTopic').value;
+    const out = document.getElementById('capOutput');
+    out.innerHTML = "<p>" + captions[topic] + "</p>";
+    out.classList.add('show');
+  }
+
+  function generateTitle() {
+    const type = document.getElementById('bookType').value;
+    const keyword = document.getElementById('bookKeyword').value.trim() || "Your Idea";
+    const templates = titleTemplates[type];
+    const out = document.getElementById('titleOutput');
+    let html = "<p><strong>Title ideas:</strong></p>";
+    templates.forEach(t => {
+      html += "<p>• " + t.replace('{kw}', keyword) + "</p>";
+    });
+    out.innerHTML = html;
+    out.classList.add('show');
+  }
+</script>
+
+</body>
+</html>
