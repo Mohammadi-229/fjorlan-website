@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Fjorlan by RM</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+    background: #0e0e12;
+    color: #f2f2f2;
+    line-height: 1.6;
+  }
+  a { text-decoration: none; color: inherit; }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #222;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  nav .logo { font-size: 1.3rem; font-weight: 700; letter-spacing: 0.5px; }
+  nav .logo span { color: #9b8cff; }
+  nav .nav-links {
+    display: flex;
+    gap: 18px;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+  }
+  nav .nav-links a { color: #ccc; }
+  nav .nav-links a.active { color: #9b8cff; font-weight: 600; }
+
+  .page-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+  }
+  .page-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+  .page-header p {
+    color: #aaa;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 0 20px 30px;
+  }
+  .filter-tab {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #2a2a30;
+    font-size: 0.85rem;
+    color: #ccc;
+  }
+  .filter-tab.active {
+    background: #9b8cff;
+    color: #0e0e12;
+    border-color: #9b8cff;
+    font-weight: 600;
+  }
+
+  .portfolio-grid {
+    padding: 20px 20px 60px;
+    display: grid;
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .portfolio-card {
+    background: #17171d;
+    border: 1px solid #242430;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .portfolio-thumb {
+    height: 180px;
+    background: linear-gradient(135deg, #1e1e26, #26263a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #55556a;
+    font-size: 0.85rem;
+  }
+  .portfolio-body { padding: 20px; }
+  .portfolio-tag {
+    display: inline-block;
+    background: #232330;
+    color: #9b8cff;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+  .portfolio-card h3 { font-size: 1.05rem; margin-bottom: 6px; }
+  .portfolio-card p { color: #999; font-size: 0.9rem; }
+
+  .cta {
+    text-align: center;
+    padding: 20px 20px 70px;
+  }
+  .btn {
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-block;
+  }
+  .btn-primary { background: #9b8cff; color: #0e0e12; }
+
+  footer {
+    border-top: 1px solid #222;
+    padding: 40px 20px;
+    text-align: center;
+    color: #777;
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Fjorlan <span>by RM</span></div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html" class="active">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="order.html">Start a Project</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Our Work</h1>
+  <p>A look at the kind of creative work we produce — illustrations, designs, and content built for real creators.</p>
+</div>
+
+<div class="filter-tabs">
+  <div class="filter-tab active">All</div>
+  <div class="filter-tab">Illustration</div>
+  <div class="filter-tab">Design</div>
+  <div class="filter-tab">Content</div>
+</div>
+
+<div class="portfolio-grid">
+  <div class="portfolio-card">
+    <div class="portfolio-thumb">Sample Artwork</div>
+    <div class="portfolio-body">
+      <span class="portfolio-tag">Illustration</span>
+      <h3>Children's Storybook Cover</h3>
+      <p>A warm, whimsical cover illustration created for an independent author's KDP release.</p>
+    </div>
+  </div>
+
+  <div class="portfolio-card">
+    <div class="portfolio-thumb">Sample Artwork</div>
+    <div class="portfolio-body">
+      <span class="portfolio-tag">Design</span>
+      <h3>Social Media Brand Kit</h3>
+      <p>A cohesive Instagram design pack for a small business, ready to post out of the box.</p>
+    </div>
+  </div>
+
+  <div class="portfolio-card">
+    <div class="portfolio-thumb">Sample Artwork</div>
+    <div class="portfolio-body">
+      <span class="portfolio-tag">Content</span>
+      <h3>YouTube Shorts Concept Set</h3>
+      <p>Hook ideas, captions, and thumbnail concepts designed to boost channel engagement.</p>
+    </div>
+  </div>
+</div>
+
+<div class="cta">
+  <a href="order.html" class="btn btn-primary">Start Your Project</a>
+</div>
+
+<footer>
+  &copy; 2026 Fjorlan by RM. All rights reserved.
+</footer>
+
+</body>
+</html>
