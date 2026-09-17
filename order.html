@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start a Project - Fjorlan by RM</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0d0d0f;
+  color: #e8e8ea;
+  line-height: 1.6;
+}
+.container { max-width: 700px; margin: 0 auto; padding: 0 24px; }
+nav {
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.logo { font-size: 20px; font-weight: 600; }
+.logo span { color: #8b7cf6; }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a {
+  color: #a0a0a8;
+  text-decoration: none;
+  font-size: 15px;
+}
+.nav-links a.active { color: #8b7cf6; }
+main { padding: 48px 0 80px; }
+h1 { font-size: 42px; margin-bottom: 12px; }
+.subtitle { color: #a0a0a8; margin-bottom: 40px; font-size: 17px; }
+label {
+  display: block;
+  font-size: 14px;
+  color: #c8c8ce;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 14px;
+  background: #1a1a1e;
+  border: 1px solid #2a2a2e;
+  border-radius: 8px;
+  color: #e8e8ea;
+  font-size: 15px;
+  font-family: inherit;
+}
+textarea { resize: vertical; min-height: 120px; }
+button {
+  margin-top: 32px;
+  width: 100%;
+  padding: 16px;
+  background: #8b7cf6;
+  color: #0d0d0f;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+footer {
+  text-align: center;
+  padding: 32px 0;
+  color: #6a6a70;
+  font-size: 13px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<nav>
+  <div class="logo">Fjorlan <span>by RM</span></div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="order.html" class="active">Start a Project</a>
+  </div>
+</nav>
+</div>
+
+<main>
+<div class="container">
+  <h1>Start a Project</h1>
+  <p class="subtitle">Tell us what you need and we'll get back to you within 24 hours.</p>
+
+  <form name="project-request" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="project-request">
+
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="service">Service</label>
+    <select id="service" name="service" required>
+      <option value="">Select a service</option>
+      <option>AI Image & Design</option>
+      <option>Children's Book Illustration</option>
+      <option>YouTube Shorts Package</option>
+      <option>Social Media Design Pack</option>
+      <option>KDP Cover & Interior Design</option>
+      <option>Other / Not sure</option>
+    </select>
+
+    <label for="budget">Budget Range</label>
+    <select id="budget" name="budget">
+      <option>Under ₹1,000</option>
+      <option>₹1,000 - ₹3,000</option>
+      <option>₹3,000 - ₹5,000</option>
+      <option>₹5,000+</option>
+    </select>
+
+    <label for="details">Project Details</label>
+    <textarea id="details" name="details" placeholder="Tell us about your project, timeline, and any references." required></textarea>
+
+    <button type="submit">Submit Request</button>
+  </form>
+</div>
+</main>
+
+<footer>© 2026 Fjorlan by RM. All rights reserved.</footer>
+</div>
+</body>
+</html>
